@@ -1,0 +1,24 @@
+
+
+ul {
+    display: grid;
+    display: flex;
+    flex-direction: row;
+}
+
+.texto {
+    background-color: gray;
+    padding: 50px;
+    color: black;
+    font-size: larger;
+}
+
+ul {
+    display: flex;
+}
+
+footer {
+
+
+
+}
