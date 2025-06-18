@@ -25,11 +25,11 @@
     justify-content: center;
   }
 
-  header h1 {
+  .cabeçalho h1 {
     margin-bottom: 10px;
   }
 
-  menu{
+  .menu{
     display: flex;
     align-items: center;
     text-align: center;
@@ -60,6 +60,7 @@
 
   }
   nav ul a button{
+
      
   }
 
