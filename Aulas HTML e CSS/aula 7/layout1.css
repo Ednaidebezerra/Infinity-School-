@@ -1,0 +1,41 @@
+/*zera config*/
+body, ul, li, p {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 1.2 rem;
+    font-family: arial;
+}
+
+/* config dos links "a" */
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/* class pai do cabeçalho*/
+.header{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 20px;
+}
+
+/* class filha de header*/
+.menu{
+  background-color: black;
+  color: white;
+   display: flex;
+}
+/* class filha de menu*/
+.menu li {
+   margin-left: 10px;
+}
+/* class filhas de menu*/
+.menu li a {
+    display: block;
+    padding: 10px;
+}
+
+/* css flexbox1*/

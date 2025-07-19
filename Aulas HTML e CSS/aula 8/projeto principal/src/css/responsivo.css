@@ -1,0 +1,110 @@
+@media (max-width: 1024px) {
+  header {
+    padding: 15px 30px;
+  }
+
+  nav a {
+    margin-left: 20px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 100px;
+  }
+
+  header {
+    position: sticky;
+  }
+
+  nav.menu {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: var(--cor-header);
+    flex-direction: column;
+    width: 200px;
+    padding: 20px;
+    display: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+  }
+
+  nav.menu a {
+    margin: 15px 0;
+  }
+
+  /* Mostra o ícone */
+  .menu-icon {
+    display: flex;
+  }
+
+  /* Quando o checkbox está marcado, mostra o menu */
+  #menu-toggle:checked+.menu-icon+nav.menu {
+    display: flex;
+  }
+
+  /* Animação do ícone hamburguer para 'X' */
+  #menu-toggle:checked+.menu-icon span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  #menu-toggle:checked+.menu-icon span:nth-child(2) {
+    opacity: 0;
+  }
+
+  #menu-toggle:checked+.menu-icon span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
+  .cardapio-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .item {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 20px;
+  }
+
+  nav a {
+    font-size: 14px;
+    margin: 8px 10px;
+  }
+
+  .item {
+    width: 95%;
+  }
+}
+
+@media (max-width: 360px) {
+  header h1 {
+    font-size: 18px;
+  }
+
+  nav a {
+    font-size: 13px;
+    margin: 6px 8px;
+  }
+
+  .item {
+    width: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+  header h1 {
+    font-size: 16px;
+  }
+
+  nav a {
+    font-size: 12px;
+    margin: 4px 6px;
+  }
+}

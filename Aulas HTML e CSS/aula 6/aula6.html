@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,59 +10,75 @@
 
 <body>
 
- <reader>
+    <header class="cabeçalho">
+        <h1> CF _ RECIFE MÓVEIS </h1>
+        <div>
+            <menu class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="#sobre"> Sobre </a></li>
+                        <li><a href="#serviços"> Serviços </a></li>
+                        <li><a href="#contato"> Contato </a></li>
+                    </ul>
+                </nav>
+                <a href="" target="_blank"><button>Saiba mais </button></a>
+            </menu>
+        </div>
+    </header>
 
-    <h1> CF _ RECIFE MÓVEIS </h1>
-
-    <menu>
-        <nav>
-            <ul>
-                <li><a href="#sobre"> Sobre </a></li>
-                <li><a href="#serviços"> Serviços </a></li>
-                <li><a href="#contatos"> Contato </a></li>
-            </ul>
-        </nav>
-        <a href="" target="_blank"><button>Saiba mais </button></a>
-    </menu>
-
- </header>
-
- <main>
-
-    <section id= "sobre" >
+    <main class="principal">
+        <section id="sobre">
             <h2>Sobre a empresa</h2>
-            <p class = "texto"> 
-                A empresa Cf Recife móveis é uma empresa de fabricação 
+            <p class="texto">
+                A empresa Cf Recife móveis é uma empresa de fabricação
                 de moveis comerciais, que atua no mercado imobiliario desde
                 2010.
             </p>
-    </section>
-        
-    <section id= "serviços">
-             <img src="" alt="">
-             <img src="" alt="">
-             <img src="" alt="">
-    </section>
+        </section>
+        <br>
 
+        <section id="serviços">
+            <h2> Serviços</h2>
+            <p>
+                A empresa Cf Recife móveis é uma empresa de fabricação
+                de moveis comerciais, que atua no mercado imobiliario desde
+                2010.
+            </p>
 
-     <section id= "contato">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+        </section>
+         <br>
+
+         <div class="formulario">
+        <section id="contato">
+            <h2>Formulario para contato</h2>
+            <br>
+            <h3>Preencher o formulario</h3>
+            <br>
             <form action="">
-                <label for="nome">nome</label>
+                <label for="nome">Nome:</label>
                 <input type="text">
             </form>
-        
             <form action="">
-                <label for="email">email</label>
+                <label for="email">E-mail:</label>
                 <input type="text">
             </form>
-     </section>
+             <form action="">
+                <label for="phone">Fone:</label>
+                <input type="number">
+            </form>
+        </section>
+        </div>
 
-       
- </main>
-      
+    </main>
 
- <footer><p> &copy; Recife 2025</p></footer>
-      
+
+    <footer class="rodape">
+        <p> &copy; Recife 2025</p>
+    </footer>
+
 </body>
 
 </html>

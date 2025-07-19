@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+:root {
+    --tamanho-titulo-grande: 25px;
+    --tamanho-titulo-medio: 18px;
+    --tamanho-titulo-pequeno: 12px;
+
+    --tamanho-texto-grande: 20px;
+    --tamanho-texto-medio: 16px;
+    --tamanho-texto-pequeno: 10px;
+
+    
+    --margem-grande: 20px;
+    --margem-medio: 10px;
+    --margem-pequeno: 5px;
+
+    --espacamento-grande: 20px;
+    --espacamento-medio: 10px;
+    --espacamento-pequeno: 5px;
+
+    --margem-cabeçalho: 20px;
+    --config-cabeçalho-text: center;
+    --config-cabeçalho-preenc: 10px;
+    --cor-fundo: #ebcdab;
+    --cor-fundo-cabeçalho: rgb(139, 132, 132);
+    --cor-font-p: black;
+    --cor-fonte-cabeçalhos: rgb(26, 2, 112);
+    --fonte-cabeçalho: sans-serif;
+    --fonte-p: arial;
+}
+
+h1,
+h2,
+h3 {
+    background-color: var(--cor-fundo-cabeçalho);
+    font-family: var(--fonte-cabeçalho);
+    text-align: var(--config-cabeçalho-text);
+
+}
+
+
+.texto {
+    text-indent: 20px;
+    font-family: var(--fonte-p);
+}
+
+@media (max-width: 1000px) {
+
+    h1 {
+        margin-bottom: var(--margem-grande);
+    }
+
+    h1,
+    h2,
+    h3 {
+        padding: 15px 20px;
+        font-size: var(--tamanho-titulo-grande);
+    }
+
+    p { 
+        padding: var(--espacamento-grande);
+        margin: var(--margem-grande);
+        font-size: var(--tamanho-texto-grande);
+    }
+}
+
+@media (max-width: 780px) {
+
+    h1 {
+        margin-bottom: var(--margem-medio);
+    }
+
+    h1,
+    h2,
+    h3 {
+        position: sticky;
+        font-size: var(--tamanho-titulo-medio);
+    }
+
+    p {
+        padding: var(--espacamento-medio);
+        margin: var(--margem-medio);
+        font-size: var(--tamanho-texto-medio);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    h1 {
+        margin-bottom: var(--margem-pequeno);
+    }
+
+    h1,
+    h2,
+    h3 {
+
+        font-size: var(--tamanho-titulo-pequeno);
+    }
+
+    p {
+        padding: var(--espacamento-pequeno);
+        margin: var(--margem-pequeno);
+        font-size: var(--tamanho-texto-pequeno);
+    }
+}

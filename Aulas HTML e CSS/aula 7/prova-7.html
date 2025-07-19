@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+:root {
+    --tamanho-titulo-grande: 25px;
+    --tamanho-titulo-medio: 18px;
+    --tamanho-titulo-pequeno: 12px;
+
+    --tamanho-texto-grande: 20px;
+    --tamanho-texto-medio: 16px;
+    --tamanho-texto-pequeno: 10px;
+
+    
+    --margem-grande: 20px;
+    --margem-medio: 10px;
+    --margem-pequeno: 5px;
+
+    --espacamento-grande: 20px;
+    --espacamento-medio: 10px;
+    --espacamento-pequeno: 5px;
+
+    --margem-cabeçalho: 20px;
+    --config-cabeçalho-text: center;
+    --config-cabeçalho-preenc: 10px;
+    --cor-fundo: #ebcdab;
+    --cor-fundo-cabeçalho: rgb(139, 132, 132);
+    --cor-font-p: black;
+    --cor-fonte-cabeçalhos: rgb(26, 2, 112);
+    --fonte-cabeçalho: sans-serif;
+    --fonte-p: arial;
+}
+
+h1,
+h2,
+h3 {
+    background-color: var(--cor-fundo-cabeçalho);
+    font-family: var(--fonte-cabeçalho);
+    text-align: var(--config-cabeçalho-text);
+
+}
+
+
+.texto {
+    text-indent: 20px;
+    font-family: var(--fonte-p);
+}
+
+@media (max-width: 1000px) {
+
+    h1 {
+        margin-bottom: var(--margem-grande);
+    }
+
+    h1,
+    h2,
+    h3 {
+        padding: 15px 20px;
+        font-size: var(--tamanho-titulo-grande);
+    }
+
+    p { 
+        padding: var(--espacamento-grande);
+        margin: var(--margem-grande);
+        font-size: var(--tamanho-texto-grande);
+    }
+}
+
+@media (max-width: 780px) {
+
+    h1 {
+        margin-bottom: var(--margem-medio);
+    }
+
+    h1,
+    h2,
+    h3 {
+        position: sticky;
+        font-size: var(--tamanho-titulo-medio);
+    }
+
+    p {
+        padding: var(--espacamento-medio);
+        margin: var(--margem-medio);
+        font-size: var(--tamanho-texto-medio);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    h1 {
+        margin-bottom: var(--margem-pequeno);
+    }
+
+    h1,
+    h2,
+    h3 {
+
+        font-size: var(--tamanho-titulo-pequeno);
+    }
+
+    p {
+        padding: var(--espacamento-pequeno);
+        margin: var(--margem-pequeno);
+        font-size: var(--tamanho-texto-pequeno);
+    }
+}
+    </style>
+
+    <title>Document</title>
+</head>
+  <header> <h1> CF_ Recife Móveis </h1> </header>
+<body>
+    <main> 
+        <h2> Sobre a empresa </h2> 
+        <p class="texto">
+           A CF móveis atua no ramo mobiliário desde 2010, no centro de recife-PE.
+        </p>
+
+        <h2>Especialidades</h2>
+        <p class="texto">
+           A Especialidade da empresa é marcenaria, projetos de mobilia para comércio e <br>
+        escritorio, fabricação em materiais como MDF, vidro, pvc.
+        </p>
+
+        <h2>Principais produtos e serviços</h2>
+        <p class="texto">
+         A CF Recife móveis trabalha com fabricação de balcões, estantes, vitrines, armários, <br>
+         expositores, prateleiras e etc, para comercio em geral. A empresa oference tambem <br>
+         serviços de desenvolvimento de projetos mobiliários.
+        </p>
+
+        <h3>Contatos</h3>
+        <p class="contatos">
+         Instagram: CF_recife <br> 
+         Whatsapp: (81) 0000-0000 
+        </p>
+    </main>
+<footer></footer>
+    
+</body>
+</html>
