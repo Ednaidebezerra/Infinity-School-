@@ -1,0 +1,25 @@
+
+header{
+    background-color: rgb(175, 224, 208);
+    position:fixed;
+    text-align: center;
+    margin: 10px;
+    width: 1200px;
+
+}
+
+h2 {
+    background-color: gray;
+    text-align: center;
+}
+p{
+ font-style: italic;
+padding: 100px;
+}
+
+img {
+    height: 150px;
+    width: 100px;
+    padding: 100px;
+}
+
