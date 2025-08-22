@@ -1,16 +1,5 @@
-/*
-console.log("Heloow Wolrd")
 
-let nome = prompt ("Qual o seu nome ?")
-let idade = prompt ("Qual sua idade?")
-
-console.log("Nome do usuario:" , nome + "A idade do usuaario:", idade )
-*/
-
-
-//onsole.log( "Soma:",  entradas +  "subtração:",  saidas + "resto:",  sobra + "mult:",  mult + "div", quociente + "potencia:",  potencia);
-
-
+// Calculadora 
 
 let operacao = prompt("Escolha o tipo de operaçao");
 let primeiroNum = parseInt(prompt("Digite o primeiro numero"));
