@@ -1,20 +1,20 @@
 
+
 //let moveis = ["armario", "Mesa", "prateleira"];
  //console.log(moveis[2]);
 
-//.Push (
-// ) adiciona no final da lista
+//.Push () adiciona no final da lista
 //let moveis = ["armario", "Mesa", "prateleira"];
 //moveis.push("cadeira")
 //console.log(moveis[2]);
 
-//.pop elimina da lista na posição informada
+//.pop() elimina da lista na posição informada
 //const moveis = ["armario", "Mesa", "prateleira"];
 //moveis.pop();
  //console.log(moveis[1]); // indice 1 posição 2
 
- // .shift () (remove o elemento na primeira posição) indice ou posição 1 =0
- // .unshift () (adiciona o elemento na primeira posição)
+ // .shift() (remove o elemento na primeira posição) indice ou posição 1 =0
+ // .unshift() (adiciona o elemento na primeira posição)
 
  //.splice (inserir a apartir de)
 //const moveis = ["armario", "Mesa", "prateleira"];//
@@ -22,7 +22,6 @@
 //console.log(moveis[1]);
 
  // slice ( primeiro numero é inclusivo  e o ultimo é exclusivo )
-
  //.concat ()( junta as duas listas)
  //.reverse () (coloca a lista em ordem reversa)
  //.join() (junta e transforma a lista em uma string gigante)
