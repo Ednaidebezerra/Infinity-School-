@@ -1,15 +1,17 @@
 
 
 let tarefasAdicionadas = [];
+let tarefasConcluidas = [];
 let opcao;
 
-while (opcao !== 4) {
+while (opcao !== 5) {
     opcao = parseInt(prompt(
         ` Escolha uma opção:
         1 - Adicionar tarefa
         2 - Listar tarefas
         3 - Excluir tarefa
-        4 - Sair
+        4 - Marcar como concluída
+        5 - Sair
         `
     ));
 
@@ -23,7 +25,10 @@ while (opcao !== 4) {
         case 3:
             removerTarefa();
             break;
-        case 4:
+        case 4: ConcluirTarefa();
+             break;
+
+        case 5:
             console.log("Saindo...");
             break;
         default:
@@ -64,6 +69,25 @@ function removerTarefa() {
     if (indice >= 0 && indice < tarefasAdicionadas.length) {
         let excluida = tarefasAdicionadas.splice(indice, 1);
         console.log(`Tarefa excluida: ${excluida}`);
+    } else {
+        console.log("Número inválido.");
+    }
+}
+
+
+function ConcluirTarefa (){
+if (tarefasAdicionadas.length === 0) {
+        console.log("Nenhuma tarefa para concluir.");
+        return;
+    }
+    listarTarefas();
+
+    let indice = parseInt(prompt("Digite o número da tarefa que deseja concluir:")) - 1;
+
+    if (indice >= 0 && indice < tarefasAdicionadas.length) {
+        let concluida = tarefasAdicionadas.splice(indice, 1);
+        console.log(`Tarefa concluida: ${concluida}`);
+        tarefasConcluidas.push(concluida);
     } else {
         console.log("Número inválido.");
     }
