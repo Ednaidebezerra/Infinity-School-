@@ -85,7 +85,7 @@ if (tarefasAdicionadas.length === 0) {
     let indice = parseInt(prompt("Digite o número da tarefa que deseja concluir:")) - 1;
 
     if (indice >= 0 && indice < tarefasAdicionadas.length) {
-        let concluida = tarefasAdicionadas.splice(indice, 1);
+        let concluida = tarefasAdicionadas.splice(indice, 1) [0];
         console.log(`Tarefa concluida: ${concluida}`);
         tarefasConcluidas.push(concluida);
     } else {
