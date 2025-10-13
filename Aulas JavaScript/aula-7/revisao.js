@@ -17,14 +17,14 @@ if (idade >= 18) {
     alert("Vc é menor de idade");
 }
 
-// FOREACH () ----------------------; OK
+// 1 FOREACH () ----------------------; OK
  const numbers =[ 1, 2 ,4 ,5 ,6 ,7 ];
 
  numbers.forEach((numero, index) => {
     console.log(" O elemento no indice" + index + "é" + numero) // so leitura e mostra
  });
 
- // MAP() ----------------------; OK
+ // 2 MAP() ----------------------; OK
  const meusNumeros =[ 1, 2 ,4 ,5 ,6 ,7 ];
 const squares = meusNumeros.map((numero) => {
     return numero * numero;
@@ -32,39 +32,40 @@ const squares = meusNumeros.map((numero) => {
  console.log(squares);//[ percorre de devolve novo array 1,4,16,25, por ele msm]
 
 
- // FILTER() ----------------------; OK
+ // 3 FILTER() ----------------------; OK
  const Numeros =[ 1, 2 ,4 ,5 ,6 ,7 ];
 const everyNum = Numeros.filter((numero) => {
     return numero % 2 === 0 ;
 })
- console.log(everyNum);//[ pares ]
+ console.log(everyNum);//[ filtra pares ]
 
- // REDUCE() ----------------------; OK
+ // 4 REDUCE() ----------------------; OK
  const meusNumeros =[ 1, 2 ,4 ,5 ,6 ,7 ];
-const sun = meusNumeros.reduce((acumulador, valoCorrente) => {
+const sun = meusNumeros.reduce((acumulador, valorCorrente) => {
     return acumulador + valoCorrente;
 })
  console.log(sun);//[ 15 soma numaro por numero]
 
- //SOME() ----------------------; OK
+ // 5 SOME() ----------------------; OK
  const meusNumeros =[ 1, 2 ,4 ,5 ,6 ,7 ];
 const algum = meusNumeros.some((numero) => {
     return numero % 2 === 0;
 })
  console.log(algum);//[true or false] 
 
- // FIND() ----------------------; OK
+ // 6 FIND() ----------------------; OK
  const meusNumeros =[ 1, 2 ,4 ,5 ,6 ,7 ];
 const encontre = meusNumeros.find((numero) => {
     return numero % 2 === 0;
 })
  console.log(encontre);//[ retorna o primeiro que encontra]
 */
- // EVERY() ----------------------; OK
- const meusNumeros =[ 1, 2 ,4 ,5 ,6 ,7 ];
+
+// 7 EVERY() ----------------------; OK
+const meusNumeros = [1, 2, 4, 5, 6, 7];
 const todos = meusNumeros.every((numero) => {
-    return numero % 2 === 0;
-})
- console.log(todos);//[ verifica se todos atende a condição ] treu or false
+    return numero % 2 === 0; // false
+});
+console.log(todos);  //[ verifica se todos atende a condição ] treu or false
 
 

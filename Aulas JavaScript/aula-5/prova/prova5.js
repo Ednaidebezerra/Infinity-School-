@@ -1,6 +1,6 @@
 
 
-let tarefasAdicionadas = [];
+let listaClientes = [];
 let tarefasConcluidas = [];
 let opcao;
 
@@ -17,15 +17,15 @@ while (opcao !== 5) {
 
     switch (opcao) {
         case 1:
-            adicionarTarefa();
+            adicionarCliente();
             break;
         case 2:
-            listarTarefas();
+            filtrarClientes();
             break;
         case 3:
-            removerTarefa();
+            trasformarLista();
             break;
-        case 4: ConcluirTarefa();
+        case 4: verificarCliente();
              break;
 
         case 5:
@@ -36,38 +36,38 @@ while (opcao !== 5) {
     }
 }
 
-function adicionarTarefa() {
+function adicionarCliente() {
     let novaTarefa = prompt("Digite a nova tarefa:");
     if (novaTarefa) {
-        tarefasAdicionadas.push(novaTarefa);
+        listaClientes.push(novaTarefa);
         console.log(`Nova tarefa adicionada: ${novaTarefa}`);
     } else {
         console.log("Nenhuma tarefa foi adicionada.");
     }
 }
 
-function listarTarefas() {
-    if (tarefasAdicionadas.length === 0) {
+function filtrarClientes() {
+    if (listaClientes.length === 0) {
         console.log("Nenhuma tarefa cadastrada.");
     } else {
         console.log("Suas tarefas:");
-        tarefasAdicionadas.forEach((tarefa, i) => {
+        listaClientes.forEach((tarefa, i) => {
             console.log(`${i + 1} - ${tarefa}`);
         });
     }
 }
 
-function removerTarefa() {
-    if (tarefasAdicionadas.length === 0) {
+function trasformarLista() {
+    if (listaClientes.length === 0) {
         console.log("Nenhuma tarefa para remover.");
         return;
     }
-    listarTarefas();
+    filtrarClientes();
 
     let indice = parseInt(prompt("Digite o número da tarefa que deseja remover:")) - 1;
 
-    if (indice >= 0 && indice < tarefasAdicionadas.length) {
-        let excluida = tarefasAdicionadas.splice(indice, 1);
+    if (indice >= 0 && indice < listaClientes.length) {
+        let excluida = listaClientes.splice(indice, 1);
         console.log(`Tarefa excluida: ${excluida}`);
     } else {
         console.log("Número inválido.");
@@ -75,17 +75,17 @@ function removerTarefa() {
 }
 
 
-function ConcluirTarefa (){
-if (tarefasAdicionadas.length === 0) {
+function verificarCliente (){
+if (listaClientes.length === 0) {
         console.log("Nenhuma tarefa para concluir.");
         return;
     }
-    listarTarefas();
+    filtrarClientes();
 
     let indice = parseInt(prompt("Digite o número da tarefa que deseja concluir:")) - 1;
 
-    if (indice >= 0 && indice < tarefasAdicionadas.length) {
-        let concluida = tarefasAdicionadas.splice(indice, 1) [0];
+    if (indice >= 0 && indice < listaClientes.length) {
+        let concluida = listaClientes.splice(indice, 1) [0];
         console.log(`Tarefa concluida: ${concluida}`);
         tarefasConcluidas.push(concluida);
     } else {
