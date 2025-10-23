@@ -46,3 +46,29 @@ function ExibirNoHTML (numero, i, resultado){
     li.innerText = `${numero} * ${i} = ${resultado}`;
     ul.appendChild(li);
 }
+
+//  CALCULOS MAT  --------------------
+// function mult ( numA, numB){
+//     return numA * numB 
+// }
+// function soma ( numA, numB){
+//     return numA + numB 
+// }
+
+// function sub ( numA, numB){
+//     return numA - numB 
+// }
+
+// function div (numA, numB) {
+//     try {
+//         if (numB === 0) {
+//             throw new Error("Erro! Divisao por zero")
+//         }
+//         return numA / numB
+
+//   } catch (err) {
+//         console.log(`Erro: ${err.message}`);
+//     } finally {
+//         
+//     }
+// }

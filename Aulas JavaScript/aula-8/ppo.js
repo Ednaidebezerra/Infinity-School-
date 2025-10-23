@@ -37,10 +37,12 @@ let pessoa = {
     profissão: "Programadora"
 };
 
+
 // ARRAY DE OBEJETOS LITERAIS --------------; ok
 
-// criando array de objetos a partir de entradas.
-const clientes = [];
+// criando array de objetos a partir de entradas
+
+let clientes = [];
 
  for (let i = 0; i < 2; i++) {
       const novoCliente = {
@@ -55,9 +57,9 @@ const clientes = [];
 
 
 // FUNÇÃO CADASTRAR -------------; ok
-//função   / variavel     /    parametros
-const Cadastros = [];  // Inicialize o array antes do loop
 
+const Cadastros = [];  // Inicialize o array antes do loop
+//função   / variavel     /    parametros
 function cadastrarPessoa(nome, idade, profissao) {
   const novoCadastro = {
     nome: nome,
@@ -76,7 +78,7 @@ for (let i = 0; i < 2; i++) {
 }
 
 console.log(Cadastros);  // Exibe todos os cadastros
-*/
+
 
 // Arrow function => e desestruturação
 const extrairPropriedades = ( titulo, autor, ano, editora) => {
@@ -96,4 +98,21 @@ const extrairPropriedades = ( titulo, autor, ano, editora) => {
   }
 
   let { titulo, autor} = livro;
-  
+
+  */
+
+  // REST  OPERATOR (...)
+
+  const exibirDetalhes = ( { material, cor, ...detalhes }) => {
+    console.log( `Material: ${material}`);
+    console.log( `Cor: ${cor}`);
+    console.log( "Detalhes:", detalhes);
+  };
+
+  const estante = {
+    material: "MDF naval",
+    cor: " Amadeirado",
+    tam: "180 cm x 63 cm x 30 cm",
+    preco: 800.0
+  };
+  exibirDetalhes (estante);
