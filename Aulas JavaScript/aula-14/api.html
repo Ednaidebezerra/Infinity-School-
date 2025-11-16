@@ -1,11 +1,60 @@
+<!-- index.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Manipulação de Objetos com DOM</title>
+    <link rel="stylesheet" href="/aula-14/api.css">
 </head>
+
 <body>
-    <script src="/Aulas JavaScript/aula-14/api.js"></script>
+    <div class="card">
+        <header>
+            <h1>Lista de Produtos <span class="small">(manipulação de objetos via DOM)</span></h1>
+            <div class="controls">
+                <div class="badge" id="count">0 itens</div>
+                <input id="search" placeholder="Pesquisar (nome ou categoria)" />
+                <select id="sort">
+                    <option value="created_desc">Mais recentes</option>
+                    <option value="price_asc">Preço ↑</option>
+                    <option value="price_desc">Preço ↓</option>
+                    <option value="name_asc">Nome A→Z</option>
+                </select>
+            </div>
+        </header>
+
+
+        <form id="product-form">
+            <input type="hidden" id="product-id" />
+            <input required id="name" placeholder="Nome do produto" />
+            <input required id="category" placeholder="Categoria" />
+            <input required id="price" type="number" min="0" step="0.01" placeholder="Preço (R$)" />
+            <button type="submit">Salvar</button>
+            <button type="button" id="clear">Limpar</button>
+        </form>
+
+
+        <table id="product-table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Categoria</th>
+                    <th>Preço</th>
+                    <th>Criado em</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+
+        <p class="small">Exemplo simples que demonstra: criação, leitura, atualização, exclusão (CRUD) e pesquisa em uma
+            lista de objetos. Dados persistem no localStorage do navegador.</p>
+    </div>
+
+    <script src="/aula-14/api.js"></script>
 </body>
+
 </html>

@@ -130,3 +130,4 @@ function carregarDoLocalStorage() {
 }
 
 carregarDoLocalStorage();
+atualizarContador();

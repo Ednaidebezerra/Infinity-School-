@@ -1,17 +1,5 @@
 
-
-// transmando objeto em JSON
-
-// const pessoa = {
-//     nome: "Edna",
-//     idade: 35,
-//     cidade: "Recife"
-// } 
-
-//  JSON.stringify(pessoa)
-//  console.log(pessoa)
-
-
+//função assincrona com tratamento de erro
 async function buscarUsuarios() {
     try {
         const resposta = await fetch("https://thesimpsonsapi.com/api/characters")
