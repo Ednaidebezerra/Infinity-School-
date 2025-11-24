@@ -14,3 +14,6 @@ altura = int(input ("Digite a altura: "))
 largura = int(input ("Digite a largura : "))
 area = altura * largura
 print(f"A area do retangulo é : {area} m2")
+
+
+
