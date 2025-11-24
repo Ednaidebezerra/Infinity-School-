@@ -1,0 +1,93 @@
+body {
+    background: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 450px;
+    margin: 40px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background: #0077ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #0059c4;
+}
+
+.bimestre {
+    background: #eef3ff;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.notaItem {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    padding: 8px;
+    margin-top: 6px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.btnEdit {
+    background: orange;
+    padding: 5px 8px;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+
+.btnDelete {
+    background: red;
+    padding: 5px 8px;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+
+.mediaBox {
+    margin-top: 10px;
+    padding: 8px;
+    background: #dfffdc;
+    border-left: 4px solid green;
+    border-radius: 5px;
+}
