@@ -1,52 +1,93 @@
+// ------------------------------
+// CARREGAR LISTA AO INICIAR
+// ------------------------------
+document.addEventListener("DOMContentLoaded", function() {
+
+    const lista = document.getElementById("lista");
+
+    // Recupera dados salvos
+    let usuariosSalvos = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+    // Adiciona cada usuário salvo à lista
+    usuariosSalvos.forEach(function(user) {
+        adicionarItemNaLista(user.usuario, user.email, user.telefone);
+    });
+});
+
+
+// ------------------------------
+// LIDAR COM O ENVIO DO FORMULÁRIO
+// ------------------------------
 document.getElementById("formulario").addEventListener("submit", function(event) {
+    event.preventDefault(); // impede o reload
 
-    // Impede o envio tradicional do formulário (recarregar a página)
-    event.preventDefault();
+    const usuario = document.getElementById("usuario").value;
+    const email = document.getElementById("email").value;
+    const telefone = document.getElementById("telefone").value;
 
-    const usuario = document.getElementById("usuario").value.trim();
-    const senha = document.getElementById("senha").value.trim();
-    const telefone = document.getElementById("telefone").value.trim();
-    const nascimento = document.getElementById("nascimento").value;
-    const email = document.getElementById("email").value.trim();
+    const mensagem = document.getElementById("mensagem");
 
-    let mensagem = document.getElementById("mensagem");
-
-    // Validações simples
-    if (usuario.length < 3) {
-        mensagem.innerText = "O usuário deve ter pelo menos 3 caracteres.";
-        mensagem.style.color = "red";
-        return;
-    }
-
-    if (senha.length < 6) {
-        mensagem.innerText = "A senha deve ter pelo menos 6 caracteres.";
-        mensagem.style.color = "red";
-        return;
-    }
-
-    if (!telefone.match(/^\(\d{2}\)\d{5}-\d{4}$/)) {
-        mensagem.innerText = "Telefone deve estar no formato (xx) xxxxx-xxxx.";
-        mensagem.style.color = "red";
-        return;
-    }
-
-    if (email.indexOf("@") === -1) {
-        mensagem.innerText = "E-mail inválido!";
-        mensagem.style.color = "red";
-        return;
-    }
-
-    // Se tudo estiver válido
-    mensagem.innerText = "Formulário enviado com sucesso! (sem recarregar a página)";
+    // Mostra mensagem
     mensagem.style.color = "green";
+    mensagem.innerText = "Dados adicionados e salvos!";
 
-    // Aqui você poderia enviar os dados para um servidor
-    // usando fetch(), AJAX ou armazenar no localStorage.
-    localStorage.setItem("usuario", JSON.stringify({
+    // Adiciona visualmente na lista
+    adicionarItemNaLista(usuario, email, telefone);
+
+    // Salva no localStorage
+    salvarNoLocalStorage(usuario, email, telefone);
+
+    // Limpa o formulário
+    document.getElementById("formulario").reset();
+});
+
+
+// ------------------------------
+// FUNÇÃO PARA CRIAR <li> NA LISTA
+// ------------------------------
+function adicionarItemNaLista(usuario, email, telefone) {
+    const lista = document.getElementById("lista");
+
+    const item = document.createElement("li");
+    item.innerHTML = `Usuário: ${usuario} <br> Email: ${email} <br> Telefone: ${telefone}`;
+
+    lista.appendChild(item);
+}
+
+
+// ------------------------------
+// SALVAR NO LOCALSTORAGE
+// ------------------------------
+function salvarNoLocalStorage(usuario, email, telefone) {
+
+    // Recupera dados existentes ou cria array vazio
+    let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+    // Adiciona novo usuário
+    usuarios.push({
         usuario: usuario,
-        senha: senha, 
-        telefone: telefone,
-        nascimento: nascimento,
-        email: email
-    }));
+        email: email,
+        telefone: telefone
+    });
+
+    // Salva novamente no localStorage
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));
+}
+
+
+// ------------------------------
+// BOTÃO RESET — LIMPA TUDO
+// ------------------------------
+document.getElementById("resetar").addEventListener("click", function() {
+    const lista = document.getElementById("lista");
+    const mensagem = document.getElementById("mensagem");
+
+    // Limpa a lista visualmente
+    lista.innerHTML = "";
+
+    // Remove do localStorage
+    localStorage.removeItem("usuarios");
+
+    mensagem.textContent = "Lista apagada e localStorage limpo.";
+    mensagem.style.color = "red";
 });
