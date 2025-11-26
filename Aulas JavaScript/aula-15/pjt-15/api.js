@@ -15,9 +15,13 @@ function aplicarDesconto(produtos) {
     gerarCard(descontoAplicado)
 }
 
+
 function gerarCard(produtosComDesconto) {
     const container = document.getElementById("container")
-    produtosComDesconto.forEach(produto => {
+    produtosComDesconto.forEach(
+        
+        
+        produto => {
         const divCard = document.createElement("div")
         divCard.className = "card"
         const imagem = document.createElement("img")
@@ -32,6 +36,5 @@ function gerarCard(produtosComDesconto) {
         container.appendChild(divCard)
     })
 }
-
 
 obterProdutos();
