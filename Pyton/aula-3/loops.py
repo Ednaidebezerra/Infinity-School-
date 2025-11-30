@@ -15,8 +15,6 @@
 
 # print("Idade válida!")
 
-
-
 # salario = float(input("Digite seu salário: "))
 # while salario < 0:
 #  if salario <= 0:
