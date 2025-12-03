@@ -4,11 +4,21 @@
 document.addEventListener("DOMContentLoaded", () => {
     try {
         const lista = document.getElementById("lista");
+        fetch("https://api-clientes-rho.vercel.app/clientes")
+            .then(response => response.json())
+            .then(data => {
+                console.log("Lista de clientes:", data);
+                data.forEach(user => {
+                    adicionarItemNaLista(user);
+                });
+            })
+            .catch(error => {
+                console.error("Erro ao buscar clientes:", error);
+            });
+
         let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
-        usuarios.forEach(user => {
-            adicionarItemNaLista(user);
-        });
+
 
     } catch (erro) {
         console.error("Erro ao carregar os dados:", erro);
@@ -19,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // ---------------------------------------
 // ENVIO DO FORMULÁRIO
 // ---------------------------------------
-document.getElementById("formulario").addEventListener("submit", function(event) {
+document.getElementById("formulario").addEventListener("submit", function (event) {
     event.preventDefault();
 
     const nome = document.getElementById("nome").value.trim();
@@ -65,7 +75,8 @@ document.getElementById("formulario").addEventListener("submit", function(event)
         let novoUsuario = { nome, usuario, senha, telefone, nascimento, email, idade };
 
         adicionarItemNaLista(novoUsuario);
-        salvarNoLocalStorage(novoUsuario);
+        salvarApi(novoUsuario);
+        //salvarNoLocalStorage(novoUsuario);
 
         mensagem.textContent = "Cadastro realizado com sucesso!";
         mensagem.style.color = "green";
@@ -113,6 +124,27 @@ function salvarNoLocalStorage(usuarioObj) {
     }
 }
 
+function salvarApi(usuarioObj) {
+    try {
+        const parametros = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(usuarioObj)
+        }
+        fetch("https://api-clientes-rho.vercel.app/clientes", parametros)
+            .then(response => response.json())
+            .then(data => {
+                console.log("Cliente cadastrado:", data);
+            })
+            .catch(error => {
+                console.error("Erro ao cadastrar cliente:", error);
+            });
+    } catch (erro) {
+        console.error("Erro ao salvar no localStorage:", erro);
+    }
+}
 
 // ---------------------------------------
 // BOTÃO RESET — LIMPA TUDO
