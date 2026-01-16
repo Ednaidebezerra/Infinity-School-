@@ -1,5 +1,5 @@
 
-## identifica o numero é positivo, negativo ou 0, usando F-strings; 
+## Identifica se o numero é positivo, negativo ou 0, usando F-strings; 
 
 numero = int(input("Digite um número: "))
 if numero > 0:
