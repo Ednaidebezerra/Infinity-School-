@@ -1,8 +1,8 @@
 
-# esta aplicação solicita login e senha do usuário com 3 tentativas e valida se estão corretos, se nao tiver corretos, exibe mensagem de erro
-# se estiverem corretos, exibe uma mensagem de boas-vindas
-login_correto = "usuario123"
-senha_correta = "12345"
+# Programa de autenticação de usuário.
+
+login_correto = "usuario"
+senha_correta = "123"
 
 for i in range(3):
     login = input("Digite seu login: ")
